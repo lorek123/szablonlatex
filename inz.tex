@@ -54,10 +54,10 @@
   style=numeric
 ]{biblatex}
 \addbibresource{./rozdzialy/bibtex.bib}
+\usepackage{blindtext}
 
-
-\author{Artur Lorenz, Krzysztof Socha}
-\title{Analizator bezpieczeństwa dla~bezprzewodowych sieci lokalnych}
+\author{No Ty}
+\title{Tytul pracy tu}
 
 \makeatletter
 \renewcommand{\maketitle}{\begin{titlepage}
@@ -78,7 +78,7 @@
     \vspace{9cm}
      {\small Praca inżynierska
 napisana pod kierownictwem}\\
-         dr. inż. Jarosława Bąka i mgr. inż. Przemysława Walkowiaka
+         tego tamtego 
      \end{flushright}
     \vspace*{\stretch{6}}
     \begin{center}
@@ -104,19 +104,19 @@ napisana pod kierownictwem}\\
 	\pagestyle{plain}
 	\chapter*{Wstęp}
 	\addcontentsline{toc}{chapter}{Wstęp}  
-		\import{rozdzialy/}{wstep}
-	\chapter{Przegląd zabezpieczeń sieci WiFi}
-		\import{rozdzialy/}{przeglad}
-	\chapter{Analiza metod weryfikacji zabezpieczeń WiFi}
-		\import{rozdzialy/}{ataki}
-	\chapter{Założenia projektowe}
-		\import{rozdzialy/}{zalozenia}
-	\chapter{Aplikacja do badania zabezpieczeń}
-		%\import{rozdzialy/}{analizator}
-	\chapter{Testy}
-		%\import{rozdzialy/}{testy}
-	\chapter{Instrukcja obsługi}
-	    %\import{rozdzialy/}{instrukcja}
+		\import{rozdzialy/}{1}
+	\chapter{1}
+		\import{rozdzialy/}{2}
+	\chapter{2}
+		\import{rozdzialy/}{3}
+	\chapter{3}
+		\import{rozdzialy/}{4}
+	\chapter{4}
+		%\import{rozdzialy/}{5}
+	\chapter{5}
+		%\import{rozdzialy/}{6}
+	\chapter{6}
+	    %\import{rozdzialy/}{7}
 	\chapter*{Zakończenie}
 \addcontentsline{toc}{chapter}{Zakończenie}  
 		%\import{rozdzialy/}{zakonczenie}
