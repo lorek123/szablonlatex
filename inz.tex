@@ -1,0 +1,124 @@
+\documentclass[12pt,a4paper,twoside]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{polski}
+\usepackage{amssymb}
+\usepackage[polish]{babel}
+
+
+\usepackage{standalone}
+\usepackage{amsfonts}
+\usepackage[left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm]{geometry}
+
+\usepackage{import}
+\usepackage{indentfirst}
+\usepackage{url}
+\usepackage[labelsep=period, font=bf]{caption}
+
+\usepackage{fancyhdr}
+\usepackage{longtable}
+\usepackage{url}
+\usepackage{float}
+\usepackage{pdfpages}
+\usepackage{indentfirst}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{courier}
+\usepackage{pdfpages}
+
+\linespread{1.3}
+\hyphenpenalty=3000
+\pretolerance=3000
+\tolerance=5000 
+\emergencystretch=10pt
+\setlength{\headheight}{15pt}
+\widowpenalty=10000
+\clubpenalty=10000
+
+\usepackage{titlesec}
+
+\titleformat{\chapter}{\bf\huge}{\thechapter.}{20pt}{\huge\bf}
+
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
+\usepackage[
+  backend=biber,
+  style=numeric
+]{biblatex}
+\addbibresource{./rozdzialy/bibtex.bib}
+
+
+\author{Artur Lorenz, Krzysztof Socha}
+\title{Analizator bezpieczeństwa dla~bezprzewodowych sieci lokalnych}
+
+\makeatletter
+\renewcommand{\maketitle}{\begin{titlepage}
+    \vspace*{1cm}
+    \begin{center}
+    	Politechnika Poznańska\\
+    	Wydział Elektryczny\\
+    \end{center}
+    \vspace{3cm}
+
+    \begin{center}
+     \LARGE\textsc{\@author}\\
+      \LARGE\textbf{\textsc{\@title}} 
+    \end{center}
+    \vspace{0.5cm}
+    \begin{flushright}
+
+    \vspace{9cm}
+     {\small Praca inżynierska
+napisana pod kierownictwem}\\
+         dr. inż. Jarosława Bąka i mgr. inż. Przemysława Walkowiaka
+     \end{flushright}
+    \vspace*{\stretch{6}}
+    \begin{center}
+    Poznań, 2017
+    \end{center}
+  \end{titlepage}%
+}
+\makeatother
+
+
+\usepackage{enumitem}
+\setitemize[1]{label=$\bullet$}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+%\setlength{\footskip}{10mm}
+\pagenumbering{arabic}
+
+\begin{document}
+	\maketitle
+	\tableofcontents
+	\pagestyle{plain}
+	\chapter*{Wstęp}
+	\addcontentsline{toc}{chapter}{Wstęp}  
+		\import{rozdzialy/}{wstep}
+	\chapter{Przegląd zabezpieczeń sieci WiFi}
+		\import{rozdzialy/}{przeglad}
+	\chapter{Analiza metod weryfikacji zabezpieczeń WiFi}
+		\import{rozdzialy/}{ataki}
+	\chapter{Założenia projektowe}
+		\import{rozdzialy/}{zalozenia}
+	\chapter{Aplikacja do badania zabezpieczeń}
+		%\import{rozdzialy/}{analizator}
+	\chapter{Testy}
+		%\import{rozdzialy/}{testy}
+	\chapter{Instrukcja obsługi}
+	    %\import{rozdzialy/}{instrukcja}
+	\chapter*{Zakończenie}
+\addcontentsline{toc}{chapter}{Zakończenie}  
+		%\import{rozdzialy/}{zakonczenie}
+	\import{rozdzialy/}{literatura}
+\end{document}\grid
