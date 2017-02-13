@@ -15,4 +15,7 @@ Możecie korzystać z sharelatex.com, całkiem dobrze sobie dawał radę z moją
 Jak wam coś nie działa to załóżcie issue na tym repo, jak ja nie pomoge to ktoś z waszych kolegów może da radę. Profit jest taki że będziecie mogli sobie podbić trochę staty na gh ;)
 Jak mi się przypomną jakieś fajne materiały dot. LaTeXa to potem wrzucę. 
 
+## UPDATE 13.02.2017
+Oficjalnie jestem inż, wrzuciłem co mogłem i na tym zakończę przygodę z tym projektem. Z rzeczy które wyszły na sam koniec to dziwne wymaganie, że przy wrzucaniu pracy do estudenta wszystko ma być w 1 pliku tex. Jako zadanie domowe zostawiam wam zrobienie skryptu który to będzie robił ;).
+
 PS. Jakby mi ktoś jebnął tu jakiegoś sensownego pull requesta to jaram się jak Rzym za Nerona. 
