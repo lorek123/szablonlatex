@@ -23,6 +23,7 @@
 \usepackage{indentfirst}
 \usepackage{fancyhdr}
 \usepackage{listings}
+\lstset{basicstyle=\small\sffamily, captionpos=b, breaklines=true}
 \usepackage{courier}
 \usepackage{pdfpages}
 
@@ -39,6 +40,14 @@
 
 \titleformat{\chapter}{\bf\huge}{\thechapter.}{20pt}{\huge\bf}
 
+\usepackage[acronym,toc,shortcuts,nopostdot]{glossaries}
+
+\usepackage{csquotes}
+\DeclareQuoteAlias{croatian}{polish}
+\usepackage{textcomp}
+\DeclareUnicodeCharacter{00A0}{~}
+\makeglossaries
+\loadglsentries{rozdzialy/akronimy}
 
 \usepackage{hyperref}
 \hypersetup{
@@ -69,8 +78,8 @@
     \vspace{3cm}
 
     \begin{center}
-     \LARGE\textsc{\@author}\\
-      \LARGE\textbf{\textsc{\@title}} 
+     \LARGE\textbf{\textsc{\@title}}\\
+      \Large\textsc{\@author}
     \end{center}
     \vspace{0.5cm}
     \begin{flushright}
@@ -100,6 +109,27 @@ napisana pod kierownictwem}\\
 
 \begin{document}
 	\maketitle
+
+  %Dedykacja 
+      \newpage
+    \begin{minipage}{6cm} \hfill
+  \end{minipage}  
+  \begin{minipage}{9cm}
+    \vspace{18.5cm}
+    {\fontfamily{cmss} \fontshape{it} \selectfont Tutaj możecie napisać komu dziękujecie za to że wam się udało i w ogóle}
+  \thispagestyle{empty}
+  \end{minipage}
+  %Koniec dedykacji
+  %Streszczenie po PL
+  \begin{abstract}
+    Trochę o celu pracy, streszczenie rozdziałów i jakieś podsumowanie z zakończenia
+  \end{abstract}
+
+  %Abstract in EN
+  \renewcommand{\abstractname}{Abstract}
+  \begin{abstract}
+  I AM POTATO 
+  \end{abstract}
 	\tableofcontents
 	\pagestyle{plain}
 	\chapter*{Wstęp}
@@ -118,7 +148,8 @@ napisana pod kierownictwem}\\
 	\chapter{6}
 	    %\import{rozdzialy/}{7}
 	\chapter*{Zakończenie}
-\addcontentsline{toc}{chapter}{Zakończenie}  
+  %\addcontentsline{toc}{chapter}{Zakończenie  
 		%\import{rozdzialy/}{zakonczenie}
-	\import{rozdzialy/}{literatura}
+	\printglossary[type=\acronymtype,style=long,title=Lista akronimów]
+  \import{rozdzialy/}{literatura}
 \end{document}\grid
